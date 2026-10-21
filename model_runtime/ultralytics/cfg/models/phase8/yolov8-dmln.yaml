@@ -1,0 +1,39 @@
+# Phase8 B1 — YOLOv8-DML (PMC12009899): C2f-DWR @ P4/P5, MEFP neck w/ P2-SPD, LSCD, WIoUv3 loss
+nc: 2
+scales:
+  n: [0.33, 0.25, 1024]
+
+backbone:
+  - [-1, 1, Conv, [64, 3, 2]] # 0-P1/2
+  - [-1, 1, Conv, [128, 3, 2]] # 1-P2/4
+  - [-1, 3, C2f, [128, True]]
+  - [-1, 1, Conv, [256, 3, 2]] # 3-P3/8
+  - [-1, 6, C2f, [256, True]]
+  - [-1, 1, Conv, [512, 3, 2]] # 5-P4/16
+  - [-1, 6, C2fDWR, [512, True]] # 6
+  - [-1, 1, Conv, [1024, 3, 2]] # 7-P5/32
+  - [-1, 3, C2fDWR, [1024, True]] # 8
+  - [-1, 1, SPPF, [1024, 5]] # 9
+
+head:
+  - [-1, 1, nn.Upsample, [None, 2, "nearest"]]
+  - [[-1, 6], 1, Concat, [1]]
+  - [-1, 3, C2fDWR, [512]]
+
+  - [-1, 1, nn.Upsample, [None, 2, "nearest"]]
+  - [[-1, 4], 1, Concat, [1]]
+  - [-1, 3, C2fDWR, [256]] # 15 P3
+
+  - [2, 1, SPDConv, [256]] # 16 P2 branch (MEFP)
+  - [[15, -1], 1, Concat, [1]]
+  - [-1, 3, C2fDWR, [256]] # 18
+
+  - [-1, 1, Conv, [256, 3, 2]]
+  - [[-1, 12], 1, Concat, [1]]
+  - [-1, 3, C2fDWR, [512]] # 21 P4
+
+  - [-1, 1, Conv, [512, 3, 2]]
+  - [[-1, 9], 1, Concat, [1]]
+  - [-1, 3, C2fDWR, [1024]] # 24 P5
+
+  - [[18, 21, 24], 1, DetectLSCD, [nc]]

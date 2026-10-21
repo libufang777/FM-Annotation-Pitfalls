@@ -1,0 +1,662 @@
+[
+  {
+    "file": "YOLO_MSHF_v4_seed0_best.pt",
+    "sha256": "a2cb9fd2b5e281d5c22bd1bd84d35a1f157cf63ea87e3df59974d156197d01e9",
+    "bytes": 10489822,
+    "paper": "tab:mainresults; tab:seeds",
+    "role": "best-validation",
+    "model_tensors_unchanged": true,
+    "path_fields_normalized": [
+      "train_args.model",
+      "train_args.data",
+      "model.args.model",
+      "model.args.data",
+      "model.yaml.yaml_file"
+    ],
+    "evaluation_commands": [
+      "python scripts/evaluate_any.py --weights weights/YOLO_MSHF_v4_seed0_best.pt --cohort v4_test --v4-root data/clean_split_v4 --out results/YOLO_MSHF_v4_seed0_best_v4_test",
+      "python scripts/evaluate_any.py --weights weights/YOLO_MSHF_v4_seed0_best.pt --cohort Gold350 --gold-root data/new_gold402 --out results/YOLO_MSHF_v4_seed0_best_Gold350",
+      "python scripts/evaluate_any.py --weights weights/YOLO_MSHF_v4_seed0_best.pt --cohort Gold402 --gold-root data/new_gold402 --out results/YOLO_MSHF_v4_seed0_best_Gold402"
+    ]
+  },
+  {
+    "file": "YOLO_MSHF_v4_seed1_best.pt",
+    "sha256": "c9163cf1ff3affd606b6ca3a392cb5433c7ffb914c98921a8d4d2440d2ced4b7",
+    "bytes": 10498462,
+    "paper": "tab:seeds",
+    "role": "best-validation",
+    "model_tensors_unchanged": true,
+    "path_fields_normalized": [
+      "train_args.model",
+      "train_args.data",
+      "train_args.project",
+      "model.args.model",
+      "model.args.data",
+      "model.args.project",
+      "model.args.save_dir",
+      "model.yaml.yaml_file"
+    ],
+    "evaluation_commands": [
+      "python scripts/evaluate_any.py --weights weights/YOLO_MSHF_v4_seed1_best.pt --cohort v4_test --v4-root data/clean_split_v4 --out results/YOLO_MSHF_v4_seed1_best_v4_test",
+      "python scripts/evaluate_any.py --weights weights/YOLO_MSHF_v4_seed1_best.pt --cohort Gold350 --gold-root data/new_gold402 --out results/YOLO_MSHF_v4_seed1_best_Gold350",
+      "python scripts/evaluate_any.py --weights weights/YOLO_MSHF_v4_seed1_best.pt --cohort Gold402 --gold-root data/new_gold402 --out results/YOLO_MSHF_v4_seed1_best_Gold402"
+    ]
+  },
+  {
+    "file": "YOLO_MSHF_v4_seed2_best.pt",
+    "sha256": "1240bcedc59066ec6e630a7814b90508511a5b1e631204aa761508bd3126dc93",
+    "bytes": 10498526,
+    "paper": "tab:seeds",
+    "role": "best-validation",
+    "model_tensors_unchanged": true,
+    "path_fields_normalized": [
+      "train_args.model",
+      "train_args.data",
+      "train_args.project",
+      "train_args.resume",
+      "model.args.model",
+      "model.args.data",
+      "model.args.project",
+      "model.args.resume",
+      "model.args.save_dir",
+      "model.yaml.yaml_file"
+    ],
+    "evaluation_commands": [
+      "python scripts/evaluate_any.py --weights weights/YOLO_MSHF_v4_seed2_best.pt --cohort v4_test --v4-root data/clean_split_v4 --out results/YOLO_MSHF_v4_seed2_best_v4_test",
+      "python scripts/evaluate_any.py --weights weights/YOLO_MSHF_v4_seed2_best.pt --cohort Gold350 --gold-root data/new_gold402 --out results/YOLO_MSHF_v4_seed2_best_Gold350",
+      "python scripts/evaluate_any.py --weights weights/YOLO_MSHF_v4_seed2_best.pt --cohort Gold402 --gold-root data/new_gold402 --out results/YOLO_MSHF_v4_seed2_best_Gold402"
+    ]
+  },
+  {
+    "file": "YOLOv8n_v4_seed0_best.pt",
+    "sha256": "35242241e5d33064e055d2174b5b56874bf572814720a0f51c8281dd3ec01b4e",
+    "bytes": 8648446,
+    "paper": "tab:mainresults; tab:seeds",
+    "role": "best-validation",
+    "model_tensors_unchanged": true,
+    "path_fields_normalized": [
+      "train_args.model",
+      "train_args.data",
+      "model.args.model",
+      "model.args.data"
+    ],
+    "evaluation_commands": [
+      "python scripts/evaluate_any.py --weights weights/YOLOv8n_v4_seed0_best.pt --cohort v4_test --v4-root data/clean_split_v4 --out results/YOLOv8n_v4_seed0_best_v4_test",
+      "python scripts/evaluate_any.py --weights weights/YOLOv8n_v4_seed0_best.pt --cohort Gold350 --gold-root data/new_gold402 --out results/YOLOv8n_v4_seed0_best_Gold350",
+      "python scripts/evaluate_any.py --weights weights/YOLOv8n_v4_seed0_best.pt --cohort Gold402 --gold-root data/new_gold402 --out results/YOLOv8n_v4_seed0_best_Gold402"
+    ]
+  },
+  {
+    "file": "YOLOv8n_v4_seed1_best.pt",
+    "sha256": "83b73f8924fdf4e1647769080f8b096ad160b7eb4d7ee6c64fb8036cf923c224",
+    "bytes": 8650942,
+    "paper": "tab:seeds",
+    "role": "best-validation",
+    "model_tensors_unchanged": true,
+    "path_fields_normalized": [
+      "train_args.model",
+      "train_args.data",
+      "model.args.model",
+      "model.args.data"
+    ],
+    "evaluation_commands": [
+      "python scripts/evaluate_any.py --weights weights/YOLOv8n_v4_seed1_best.pt --cohort v4_test --v4-root data/clean_split_v4 --out results/YOLOv8n_v4_seed1_best_v4_test",
+      "python scripts/evaluate_any.py --weights weights/YOLOv8n_v4_seed1_best.pt --cohort Gold350 --gold-root data/new_gold402 --out results/YOLOv8n_v4_seed1_best_Gold350",
+      "python scripts/evaluate_any.py --weights weights/YOLOv8n_v4_seed1_best.pt --cohort Gold402 --gold-root data/new_gold402 --out results/YOLOv8n_v4_seed1_best_Gold402"
+    ]
+  },
+  {
+    "file": "YOLOv8n_v4_seed2_best.pt",
+    "sha256": "fdcb7f4c8b9681d52fc08fbeb038824b99b21ce7c7d017f4d00b9538ba79f64f",
+    "bytes": 8650942,
+    "paper": "tab:seeds",
+    "role": "best-validation",
+    "model_tensors_unchanged": true,
+    "path_fields_normalized": [
+      "train_args.model",
+      "train_args.data",
+      "model.args.model",
+      "model.args.data"
+    ],
+    "evaluation_commands": [
+      "python scripts/evaluate_any.py --weights weights/YOLOv8n_v4_seed2_best.pt --cohort v4_test --v4-root data/clean_split_v4 --out results/YOLOv8n_v4_seed2_best_v4_test",
+      "python scripts/evaluate_any.py --weights weights/YOLOv8n_v4_seed2_best.pt --cohort Gold350 --gold-root data/new_gold402 --out results/YOLOv8n_v4_seed2_best_Gold350",
+      "python scripts/evaluate_any.py --weights weights/YOLOv8n_v4_seed2_best.pt --cohort Gold402 --gold-root data/new_gold402 --out results/YOLOv8n_v4_seed2_best_Gold402"
+    ]
+  },
+  {
+    "file": "YOLOv11n_v4_seed0_best.pt",
+    "sha256": "4f07f46c6eb70c5f386ea2d6d6e1789980e962109aab3e4c7825fdffd94d60ad",
+    "bytes": 5790713,
+    "paper": "tab:mainresults; tab:seeds",
+    "role": "best-validation",
+    "model_tensors_unchanged": true,
+    "path_fields_normalized": [
+      "train_args.model",
+      "train_args.data",
+      "model.args.model",
+      "model.args.data"
+    ],
+    "evaluation_commands": [
+      "python scripts/evaluate_any.py --weights weights/YOLOv11n_v4_seed0_best.pt --cohort v4_test --v4-root data/clean_split_v4 --out results/YOLOv11n_v4_seed0_best_v4_test",
+      "python scripts/evaluate_any.py --weights weights/YOLOv11n_v4_seed0_best.pt --cohort Gold350 --gold-root data/new_gold402 --out results/YOLOv11n_v4_seed0_best_Gold350",
+      "python scripts/evaluate_any.py --weights weights/YOLOv11n_v4_seed0_best.pt --cohort Gold402 --gold-root data/new_gold402 --out results/YOLOv11n_v4_seed0_best_Gold402"
+    ]
+  },
+  {
+    "file": "YOLOv11n_v4_seed1_best.pt",
+    "sha256": "c5763124da311c24dc8683e679dff86b2f008362f82b1ab353464acb1f32a5d2",
+    "bytes": 5793977,
+    "paper": "tab:seeds",
+    "role": "best-validation",
+    "model_tensors_unchanged": true,
+    "path_fields_normalized": [
+      "train_args.model",
+      "train_args.data",
+      "model.args.model",
+      "model.args.data"
+    ],
+    "evaluation_commands": [
+      "python scripts/evaluate_any.py --weights weights/YOLOv11n_v4_seed1_best.pt --cohort v4_test --v4-root data/clean_split_v4 --out results/YOLOv11n_v4_seed1_best_v4_test",
+      "python scripts/evaluate_any.py --weights weights/YOLOv11n_v4_seed1_best.pt --cohort Gold350 --gold-root data/new_gold402 --out results/YOLOv11n_v4_seed1_best_Gold350",
+      "python scripts/evaluate_any.py --weights weights/YOLOv11n_v4_seed1_best.pt --cohort Gold402 --gold-root data/new_gold402 --out results/YOLOv11n_v4_seed1_best_Gold402"
+    ]
+  },
+  {
+    "file": "YOLOv11n_v4_seed2_best.pt",
+    "sha256": "29b09d273d72dedb4eedbf568d990c0d02d1c715374363b7356f99952d5a1806",
+    "bytes": 5793977,
+    "paper": "tab:seeds",
+    "role": "best-validation",
+    "model_tensors_unchanged": true,
+    "path_fields_normalized": [
+      "train_args.model",
+      "train_args.data",
+      "model.args.model",
+      "model.args.data"
+    ],
+    "evaluation_commands": [
+      "python scripts/evaluate_any.py --weights weights/YOLOv11n_v4_seed2_best.pt --cohort v4_test --v4-root data/clean_split_v4 --out results/YOLOv11n_v4_seed2_best_v4_test",
+      "python scripts/evaluate_any.py --weights weights/YOLOv11n_v4_seed2_best.pt --cohort Gold350 --gold-root data/new_gold402 --out results/YOLOv11n_v4_seed2_best_Gold350",
+      "python scripts/evaluate_any.py --weights weights/YOLOv11n_v4_seed2_best.pt --cohort Gold402 --gold-root data/new_gold402 --out results/YOLOv11n_v4_seed2_best_Gold402"
+    ]
+  },
+  {
+    "file": "YOLO_MSHF_v4_safe_seed0_best.pt",
+    "sha256": "111c6480b6107df07219b745f54f3b5248a50a5934e68b80a32af7c43b8e887d",
+    "bytes": 10470580,
+    "paper": "tab:mainresults; tab:sam",
+    "role": "best-validation",
+    "model_tensors_unchanged": true,
+    "path_fields_normalized": [
+      "train_args.data",
+      "model.args.data",
+      "model.yaml.yaml_file"
+    ],
+    "evaluation_commands": [
+      "python scripts/evaluate_any.py --weights weights/YOLO_MSHF_v4_safe_seed0_best.pt --cohort v4_test --v4-root data/clean_split_v4 --out results/YOLO_MSHF_v4_safe_seed0_best_v4_test",
+      "python scripts/evaluate_any.py --weights weights/YOLO_MSHF_v4_safe_seed0_best.pt --cohort Gold350 --gold-root data/new_gold402 --out results/YOLO_MSHF_v4_safe_seed0_best_Gold350",
+      "python scripts/evaluate_any.py --weights weights/YOLO_MSHF_v4_safe_seed0_best.pt --cohort Gold402 --gold-root data/new_gold402 --out results/YOLO_MSHF_v4_safe_seed0_best_Gold402"
+    ]
+  },
+  {
+    "file": "YOLOv8n_v4_safe_seed0_best.pt",
+    "sha256": "b3cf6d122461f1e8fb4ab9ffdb5d8c4de129a34c266e71067277840cc3468073",
+    "bytes": 8650325,
+    "paper": "tab:mainresults; tab:sam",
+    "role": "best-validation",
+    "model_tensors_unchanged": true,
+    "path_fields_normalized": [
+      "train_args.model",
+      "train_args.data",
+      "model.args.model",
+      "model.args.data"
+    ],
+    "evaluation_commands": [
+      "python scripts/evaluate_any.py --weights weights/YOLOv8n_v4_safe_seed0_best.pt --cohort v4_test --v4-root data/clean_split_v4 --out results/YOLOv8n_v4_safe_seed0_best_v4_test",
+      "python scripts/evaluate_any.py --weights weights/YOLOv8n_v4_safe_seed0_best.pt --cohort Gold350 --gold-root data/new_gold402 --out results/YOLOv8n_v4_safe_seed0_best_Gold350",
+      "python scripts/evaluate_any.py --weights weights/YOLOv8n_v4_safe_seed0_best.pt --cohort Gold402 --gold-root data/new_gold402 --out results/YOLOv8n_v4_safe_seed0_best_Gold402"
+    ]
+  },
+  {
+    "file": "YOLOv11n_v4_safe_seed0_best.pt",
+    "sha256": "dbbb49dfe0d358e3380fb815b32327f17d800bf855478fbca32845cbc7514ae0",
+    "bytes": 5793248,
+    "paper": "tab:mainresults; tab:sam",
+    "role": "best-validation",
+    "model_tensors_unchanged": true,
+    "path_fields_normalized": [
+      "train_args.model",
+      "train_args.data",
+      "model.args.model",
+      "model.args.data"
+    ],
+    "evaluation_commands": [
+      "python scripts/evaluate_any.py --weights weights/YOLOv11n_v4_safe_seed0_best.pt --cohort v4_test --v4-root data/clean_split_v4 --out results/YOLOv11n_v4_safe_seed0_best_v4_test",
+      "python scripts/evaluate_any.py --weights weights/YOLOv11n_v4_safe_seed0_best.pt --cohort Gold350 --gold-root data/new_gold402 --out results/YOLOv11n_v4_safe_seed0_best_Gold350",
+      "python scripts/evaluate_any.py --weights weights/YOLOv11n_v4_safe_seed0_best.pt --cohort Gold402 --gold-root data/new_gold402 --out results/YOLOv11n_v4_safe_seed0_best_Gold402"
+    ]
+  },
+  {
+    "file": "NR3_seed0_best.pt",
+    "sha256": "8f88594d15fcfe7c8def0073511bcdf1fb31b886a5a7888f4422d60d1f0decee",
+    "bytes": 9030624,
+    "paper": "tab:nr",
+    "role": "best-validation",
+    "model_tensors_unchanged": true,
+    "path_fields_normalized": [
+      "train_args.model",
+      "train_args.data",
+      "train_args.pretrained",
+      "model.args.model",
+      "model.args.data",
+      "model.args.pretrained",
+      "model.yaml.yaml_file"
+    ],
+    "evaluation_commands": [
+      "python scripts/evaluate_any.py --weights weights/NR3_seed0_best.pt --cohort v4_test --v4-root data/clean_split_v4 --out results/NR3_seed0_best_v4_test",
+      "python scripts/evaluate_any.py --weights weights/NR3_seed0_best.pt --cohort Gold350 --gold-root data/new_gold402 --out results/NR3_seed0_best_Gold350",
+      "python scripts/evaluate_any.py --weights weights/NR3_seed0_best.pt --cohort Gold402 --gold-root data/new_gold402 --out results/NR3_seed0_best_Gold402"
+    ]
+  },
+  {
+    "file": "NR5_seed0_best.pt",
+    "sha256": "9735147823d6a004f95654b05c8d95c6053f64c66c5691c7240f8b5b2ec1b3f0",
+    "bytes": 10547300,
+    "paper": "tab:nr",
+    "role": "best-validation",
+    "model_tensors_unchanged": true,
+    "path_fields_normalized": [
+      "train_args.model",
+      "train_args.data",
+      "train_args.pretrained",
+      "model.args.model",
+      "model.args.data",
+      "model.args.pretrained",
+      "model.yaml.yaml_file"
+    ],
+    "evaluation_commands": [
+      "python scripts/evaluate_any.py --weights weights/NR5_seed0_best.pt --cohort v4_test --v4-root data/clean_split_v4 --out results/NR5_seed0_best_v4_test",
+      "python scripts/evaluate_any.py --weights weights/NR5_seed0_best.pt --cohort Gold350 --gold-root data/new_gold402 --out results/NR5_seed0_best_Gold350",
+      "python scripts/evaluate_any.py --weights weights/NR5_seed0_best.pt --cohort Gold402 --gold-root data/new_gold402 --out results/NR5_seed0_best_Gold402"
+    ]
+  },
+  {
+    "file": "NR7_seed0_best.pt",
+    "sha256": "6701f3073c2b0dcffb047effb36d98caa77cffa7074ebb70a8901991d0f3f5e8",
+    "bytes": 10467664,
+    "paper": "tab:nr",
+    "role": "best-validation",
+    "model_tensors_unchanged": true,
+    "path_fields_normalized": [
+      "train_args.model",
+      "train_args.data",
+      "train_args.pretrained",
+      "model.args.model",
+      "model.args.data",
+      "model.args.pretrained",
+      "model.yaml.yaml_file"
+    ],
+    "evaluation_commands": [
+      "python scripts/evaluate_any.py --weights weights/NR7_seed0_best.pt --cohort v4_test --v4-root data/clean_split_v4 --out results/NR7_seed0_best_v4_test",
+      "python scripts/evaluate_any.py --weights weights/NR7_seed0_best.pt --cohort Gold350 --gold-root data/new_gold402 --out results/NR7_seed0_best_Gold350",
+      "python scripts/evaluate_any.py --weights weights/NR7_seed0_best.pt --cohort Gold402 --gold-root data/new_gold402 --out results/NR7_seed0_best_Gold402"
+    ]
+  },
+  {
+    "file": "coverage_A0_last.pt",
+    "sha256": "a92034d6e91089d8c11a2517a50b7adceb4dcf603f0030230a62b31b405d34fc",
+    "bytes": 10483212,
+    "paper": "tab:coverage3seed",
+    "role": "primary-final-epoch",
+    "model_tensors_unchanged": true,
+    "path_fields_normalized": [
+      "train_args.model",
+      "train_args.data",
+      "model.args.model",
+      "model.args.data",
+      "model.yaml.yaml_file"
+    ],
+    "evaluation_commands": [
+      "python scripts/evaluate_any.py --weights weights/coverage_A0_last.pt --cohort GoldB --gold-root data/new_gold402 --out results/coverage_A0_last_GoldB"
+    ]
+  },
+  {
+    "file": "coverage_A1_last.pt",
+    "sha256": "88a89e541578d0a9b2fc70599e31256806970bb0dbeb6604537de9584d89a191",
+    "bytes": 10491852,
+    "paper": "tab:coverage3seed",
+    "role": "primary-final-epoch",
+    "model_tensors_unchanged": true,
+    "path_fields_normalized": [
+      "train_args.model",
+      "train_args.data",
+      "train_args.project",
+      "model.args.model",
+      "model.args.data",
+      "model.args.project",
+      "model.args.save_dir",
+      "model.yaml.yaml_file"
+    ],
+    "evaluation_commands": [
+      "python scripts/evaluate_any.py --weights weights/coverage_A1_last.pt --cohort GoldB --gold-root data/new_gold402 --out results/coverage_A1_last_GoldB"
+    ]
+  },
+  {
+    "file": "coverage_A2_last.pt",
+    "sha256": "84186fb13a43c70fca45f6790d0f8385ac4348bf2bbdc2377d1103dfceb91bc3",
+    "bytes": 10491916,
+    "paper": "tab:coverage3seed",
+    "role": "primary-final-epoch",
+    "model_tensors_unchanged": true,
+    "path_fields_normalized": [
+      "train_args.model",
+      "train_args.data",
+      "train_args.project",
+      "train_args.resume",
+      "model.args.model",
+      "model.args.data",
+      "model.args.project",
+      "model.args.resume",
+      "model.args.save_dir",
+      "model.yaml.yaml_file"
+    ],
+    "evaluation_commands": [
+      "python scripts/evaluate_any.py --weights weights/coverage_A2_last.pt --cohort GoldB --gold-root data/new_gold402 --out results/coverage_A2_last_GoldB"
+    ]
+  },
+  {
+    "file": "coverage_B0_last.pt",
+    "sha256": "f130146d73dfc749169c2ad143b81bcdf23787d9b4f9ebde174981d5b0938d40",
+    "bytes": 10491916,
+    "paper": "tab:coverage3seed",
+    "role": "primary-final-epoch",
+    "model_tensors_unchanged": true,
+    "path_fields_normalized": [
+      "train_args.model",
+      "train_args.data",
+      "train_args.project",
+      "model.args.model",
+      "model.args.data",
+      "model.args.project",
+      "model.args.save_dir",
+      "model.yaml.yaml_file"
+    ],
+    "evaluation_commands": [
+      "python scripts/evaluate_any.py --weights weights/coverage_B0_last.pt --cohort GoldB --gold-root data/new_gold402 --out results/coverage_B0_last_GoldB"
+    ]
+  },
+  {
+    "file": "coverage_B0_best.pt",
+    "sha256": "479489055722797097f5e05a0940903b270c5147e73dbf6d771c8378a8d6d4db",
+    "bytes": 10491916,
+    "paper": "tab:coverage3seed sensitivity",
+    "role": "best-validation-sensitivity",
+    "model_tensors_unchanged": true,
+    "path_fields_normalized": [
+      "train_args.model",
+      "train_args.data",
+      "train_args.project",
+      "model.args.model",
+      "model.args.data",
+      "model.args.project",
+      "model.args.save_dir",
+      "model.yaml.yaml_file"
+    ],
+    "evaluation_commands": [
+      "python scripts/evaluate_any.py --weights weights/coverage_B0_best.pt --cohort GoldB --gold-root data/new_gold402 --out results/coverage_B0_best_GoldB"
+    ]
+  },
+  {
+    "file": "coverage_B1_last.pt",
+    "sha256": "6afc8426b5b9af60801c7f9dc8efaae0323ef142201212a81f00d871300292b3",
+    "bytes": 10491916,
+    "paper": "tab:coverage3seed",
+    "role": "primary-final-epoch",
+    "model_tensors_unchanged": true,
+    "path_fields_normalized": [
+      "train_args.model",
+      "train_args.data",
+      "train_args.project",
+      "model.args.model",
+      "model.args.data",
+      "model.args.project",
+      "model.args.save_dir",
+      "model.yaml.yaml_file"
+    ],
+    "evaluation_commands": [
+      "python scripts/evaluate_any.py --weights weights/coverage_B1_last.pt --cohort GoldB --gold-root data/new_gold402 --out results/coverage_B1_last_GoldB"
+    ]
+  },
+  {
+    "file": "coverage_B1_best.pt",
+    "sha256": "c23712a2e374cd4cd2a667ff0ed70f2c05fbb9469fc6af0869e0f82611e0176d",
+    "bytes": 10491916,
+    "paper": "tab:coverage3seed sensitivity",
+    "role": "best-validation-sensitivity",
+    "model_tensors_unchanged": true,
+    "path_fields_normalized": [
+      "train_args.model",
+      "train_args.data",
+      "train_args.project",
+      "model.args.model",
+      "model.args.data",
+      "model.args.project",
+      "model.args.save_dir",
+      "model.yaml.yaml_file"
+    ],
+    "evaluation_commands": [
+      "python scripts/evaluate_any.py --weights weights/coverage_B1_best.pt --cohort GoldB --gold-root data/new_gold402 --out results/coverage_B1_best_GoldB"
+    ]
+  },
+  {
+    "file": "coverage_B2_last.pt",
+    "sha256": "71158fd76d563ea7c05ef7241c1e9922d7d9dccb6d851f0f24aed7d8678067bb",
+    "bytes": 10491916,
+    "paper": "tab:coverage3seed",
+    "role": "primary-final-epoch",
+    "model_tensors_unchanged": true,
+    "path_fields_normalized": [
+      "train_args.model",
+      "train_args.data",
+      "train_args.project",
+      "train_args.resume",
+      "model.args.model",
+      "model.args.data",
+      "model.args.project",
+      "model.args.resume",
+      "model.args.save_dir",
+      "model.yaml.yaml_file"
+    ],
+    "evaluation_commands": [
+      "python scripts/evaluate_any.py --weights weights/coverage_B2_last.pt --cohort GoldB --gold-root data/new_gold402 --out results/coverage_B2_last_GoldB"
+    ]
+  },
+  {
+    "file": "coverage_B2_best.pt",
+    "sha256": "10dd8ac4b856eb8fefe36af92808f60302f45caaa64ab1dbc8469d95f3dea71c",
+    "bytes": 10491916,
+    "paper": "tab:coverage3seed sensitivity",
+    "role": "best-validation-sensitivity",
+    "model_tensors_unchanged": true,
+    "path_fields_normalized": [
+      "train_args.model",
+      "train_args.data",
+      "train_args.project",
+      "train_args.resume",
+      "model.args.model",
+      "model.args.data",
+      "model.args.project",
+      "model.args.resume",
+      "model.args.save_dir",
+      "model.yaml.yaml_file"
+    ],
+    "evaluation_commands": [
+      "python scripts/evaluate_any.py --weights weights/coverage_B2_best.pt --cohort GoldB --gold-root data/new_gold402 --out results/coverage_B2_best_GoldB"
+    ]
+  },
+  {
+    "file": "coverage_C0_last.pt",
+    "sha256": "4127af02882c83c9e11865dcf8195ebe801d6f59624ae6d8f3f3ad0ad08b55e9",
+    "bytes": 20339166,
+    "paper": "tab:coverage3seed",
+    "role": "primary-final-epoch",
+    "model_tensors_unchanged": true,
+    "path_fields_normalized": [
+      "train_args.model",
+      "train_args.data",
+      "train_args.project",
+      "train_args.save_dir",
+      "ema.args.model",
+      "ema.args.data",
+      "ema.args.project",
+      "ema.args.save_dir",
+      "ema.yaml.yaml_file"
+    ],
+    "evaluation_commands": [
+      "python scripts/evaluate_any.py --weights weights/coverage_C0_last.pt --cohort GoldB --gold-root data/new_gold402 --out results/coverage_C0_last_GoldB"
+    ]
+  },
+  {
+    "file": "coverage_C0_best.pt",
+    "sha256": "b99384316d3badaf8effe799fa65b2d909d59b82f027b09ab4c85d25f71d6115",
+    "bytes": 20339166,
+    "paper": "tab:coverage3seed sensitivity",
+    "role": "best-validation-sensitivity",
+    "model_tensors_unchanged": true,
+    "path_fields_normalized": [
+      "train_args.model",
+      "train_args.data",
+      "train_args.project",
+      "train_args.save_dir",
+      "ema.args.model",
+      "ema.args.data",
+      "ema.args.project",
+      "ema.args.save_dir",
+      "ema.yaml.yaml_file"
+    ],
+    "evaluation_commands": [
+      "python scripts/evaluate_any.py --weights weights/coverage_C0_best.pt --cohort GoldB --gold-root data/new_gold402 --out results/coverage_C0_best_GoldB"
+    ]
+  },
+  {
+    "file": "coverage_C1_last.pt",
+    "sha256": "ca6391b2bde618064f691c4f2a238b391d277e605aa91fef4feb92c3c81c9047",
+    "bytes": 10491916,
+    "paper": "tab:coverage3seed",
+    "role": "primary-final-epoch",
+    "model_tensors_unchanged": true,
+    "path_fields_normalized": [
+      "train_args.model",
+      "train_args.data",
+      "train_args.project",
+      "model.args.model",
+      "model.args.data",
+      "model.args.project",
+      "model.args.save_dir",
+      "model.yaml.yaml_file"
+    ],
+    "evaluation_commands": [
+      "python scripts/evaluate_any.py --weights weights/coverage_C1_last.pt --cohort GoldB --gold-root data/new_gold402 --out results/coverage_C1_last_GoldB"
+    ]
+  },
+  {
+    "file": "coverage_C1_best.pt",
+    "sha256": "c0d1fd4d619c25138ce7b3206d51845969471fcbf449562c987f76e229989736",
+    "bytes": 10491916,
+    "paper": "tab:coverage3seed sensitivity",
+    "role": "best-validation-sensitivity",
+    "model_tensors_unchanged": true,
+    "path_fields_normalized": [
+      "train_args.model",
+      "train_args.data",
+      "train_args.project",
+      "model.args.model",
+      "model.args.data",
+      "model.args.project",
+      "model.args.save_dir",
+      "model.yaml.yaml_file"
+    ],
+    "evaluation_commands": [
+      "python scripts/evaluate_any.py --weights weights/coverage_C1_best.pt --cohort GoldB --gold-root data/new_gold402 --out results/coverage_C1_best_GoldB"
+    ]
+  },
+  {
+    "file": "coverage_C2_last.pt",
+    "sha256": "0211228eb578c5ed374c9398ca83f4cd9d7fd128cdf113daf4d81643d581bea2",
+    "bytes": 10491916,
+    "paper": "tab:coverage3seed",
+    "role": "primary-final-epoch",
+    "model_tensors_unchanged": true,
+    "path_fields_normalized": [
+      "train_args.model",
+      "train_args.data",
+      "train_args.project",
+      "model.args.model",
+      "model.args.data",
+      "model.args.project",
+      "model.args.save_dir",
+      "model.yaml.yaml_file"
+    ],
+    "evaluation_commands": [
+      "python scripts/evaluate_any.py --weights weights/coverage_C2_last.pt --cohort GoldB --gold-root data/new_gold402 --out results/coverage_C2_last_GoldB"
+    ]
+  },
+  {
+    "file": "coverage_C2_best.pt",
+    "sha256": "342bdfd2e93b994f62e65a3c9719b18c9d2e7419baee5836cb99410e09169a94",
+    "bytes": 10491916,
+    "paper": "tab:coverage3seed sensitivity",
+    "role": "best-validation-sensitivity",
+    "model_tensors_unchanged": true,
+    "path_fields_normalized": [
+      "train_args.model",
+      "train_args.data",
+      "train_args.project",
+      "model.args.model",
+      "model.args.data",
+      "model.args.project",
+      "model.args.save_dir",
+      "model.yaml.yaml_file"
+    ],
+    "evaluation_commands": [
+      "python scripts/evaluate_any.py --weights weights/coverage_C2_best.pt --cohort GoldB --gold-root data/new_gold402 --out results/coverage_C2_best_GoldB"
+    ]
+  },
+  {
+    "file": "no_bean_relabelled_seed0_best.pt",
+    "sha256": "9bab5345c025373290368bb41b7e633ea1f6fa4fc225cabbd1961ef3164d265e",
+    "bytes": 10504082,
+    "paper": "Section 5.4; reviewer 2-2.1",
+    "role": "best-validation",
+    "model_tensors_unchanged": true,
+    "path_fields_normalized": [
+      "train_args.model",
+      "train_args.data",
+      "train_args.project",
+      "model.args.model",
+      "model.args.data",
+      "model.args.project",
+      "model.args.save_dir",
+      "model.yaml.yaml_file"
+    ],
+    "evaluation_commands": [
+      "python scripts/evaluate_any.py --weights weights/no_bean_relabelled_seed0_best.pt --cohort v4_test --v4-root data/clean_split_v4 --out results/no_bean_relabelled_seed0_best_v4_test",
+      "python scripts/evaluate_any.py --weights weights/no_bean_relabelled_seed0_best.pt --cohort Gold350 --gold-root data/new_gold402 --out results/no_bean_relabelled_seed0_best_Gold350",
+      "python scripts/evaluate_any.py --weights weights/no_bean_relabelled_seed0_best.pt --cohort Gold402 --gold-root data/new_gold402 --out results/no_bean_relabelled_seed0_best_Gold402"
+    ]
+  },
+  {
+    "file": "v2_pre_species_cleaning_seed0_best.pt",
+    "sha256": "60e828537aa6c226fb6d1fd198f3a3ef7a5c4206cec38ef8196c811ed0618dbb",
+    "bytes": 10499944,
+    "paper": "Section 6.3; Gate 6",
+    "role": "best-validation",
+    "model_tensors_unchanged": true,
+    "path_fields_normalized": [],
+    "evaluation_commands": [
+      "python scripts/evaluate_any.py --weights weights/v2_pre_species_cleaning_seed0_best.pt --cohort Gold350 --gold-root data/new_gold402 --out results/v2_pre_species_cleaning_seed0_best_Gold350",
+      "python scripts/evaluate_any.py --weights weights/v2_pre_species_cleaning_seed0_best.pt --cohort Gold402 --gold-root data/new_gold402 --out results/v2_pre_species_cleaning_seed0_best_Gold402"
+    ]
+  }
+]

@@ -1,0 +1,11 @@
+# Python 3.10; the local fork at model_runtime/ultralytics shadows this wheel.
+# Stock Ultralytics supplies its runtime dependencies. Select a platform-
+# compatible PyTorch build before installing this file where needed.
+ultralytics==8.3.63
+torch==2.7.1
+torchvision==0.22.1
+numpy>=1.23,<2.0
+Pillow>=7.1.2
+scipy>=1.4.1
+matplotlib>=3.3.0
+pytorch_wavelets==1.3.0

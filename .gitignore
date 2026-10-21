@@ -1,0 +1,10 @@
+# Local Python caches and evaluation artifacts are not source material.
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.venv/
+results/
+
+# Data are distributed through ScienceDB; checkpoints are GitHub Release assets.
+data/
+*.pt

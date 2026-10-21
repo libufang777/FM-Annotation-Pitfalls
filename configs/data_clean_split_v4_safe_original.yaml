@@ -1,0 +1,9 @@
+# clean_split_v4_safe — ADDnewData (IMG_*) removed from train
+path: data/clean_split_v4_safe
+train: train/images
+val: val/images
+test: test/images
+
+names:
+  0: Bean_Rust
+  1: Angular_Leaf_Spot

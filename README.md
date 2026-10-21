@@ -167,4 +167,3 @@ before evaluation.
 | `coverage_C2_best.pt` | `342bdfd2e93b994f62e65a3c9719b18c9d2e7419baee5836cb99410e09169a94` | tab:coverage3seed sensitivity | best-validation-sensitivity |
 | `no_bean_relabelled_seed0_best.pt` | `9bab5345c025373290368bb41b7e633ea1f6fa4fc225cabbd1961ef3164d265e` | Section 5.4; reviewer 2-2.1 | best-validation |
 | `v2_pre_species_cleaning_seed0_best.pt` | `60e828537aa6c226fb6d1fd198f3a3ef7a5c4206cec38ef8196c811ed0618dbb` | Section 6.3; Gate 6 | best-validation |
-

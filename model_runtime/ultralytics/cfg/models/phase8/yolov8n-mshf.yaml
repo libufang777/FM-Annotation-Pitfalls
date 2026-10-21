@@ -1,0 +1,22 @@
+# Phase8 — MSHF@YOLOv8n: native v8 backbone + BiHSFPN + BLPA@P2/P3 (same head as yolo_mshf_v2_blpa)
+nc: 2
+scales:
+  n: [0.33, 0.25, 1024]
+
+backbone:
+  - [-1, 1, Conv, [64, 3, 2]]
+  - [-1, 1, Conv, [128, 3, 2]]
+  - [-1, 3, C2f, [128, True]]
+  - [-1, 1, Conv, [256, 3, 2]]
+  - [-1, 6, C2f, [256, True]]
+  - [-1, 1, Conv, [512, 3, 2]]
+  - [-1, 6, C2f, [512, True]]
+  - [-1, 1, Conv, [1024, 3, 2]]
+  - [-1, 3, C2f, [1024, True]]
+  - [-1, 1, SPPF, [1024, 5]]
+
+head:
+  - [[2, 4, 6, 9], 1, BiHSFPN, [[64, 64, 128, 256], [64, 64, 128, 256]]]
+  - [10, 1, BLPA, [64]]
+  - [11, 1, BLPA, [64]]
+  - [[14, 15, 12, 13], 1, Detect, [nc]]

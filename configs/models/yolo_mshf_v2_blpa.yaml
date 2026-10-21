@@ -1,0 +1,53 @@
+# YOLO-MSHF v2 + BLPA (Phase 2)
+# 基于 R3 yaml,在 BiHSFPN 输出的 P2 + P3 后加 BLPA (小目标聚焦)
+#
+# 与 PathoAgent 的差别:
+#   PathoAgent: 4 层全加 (P2/P3/P4/P5),  ~330K 参数
+#   BLPA:       只加 P2 + P3,            ~26K 参数 (小 12 倍)
+#
+# 数据特性依据:
+#   - median 目标 14x14 像素
+#   - 90.4% 目标 < 32x32 (COCO 小目标定义)
+#   - P2 (160x160) + P3 (80x80) 覆盖所有小目标尺度
+#   - P4/P5 几乎没有目标, 加 attention 浪费参数
+#
+# Layer 索引:
+#   0~8 : backbone (与 R3 完全相同)
+#   9   : BiHSFPN ← from [2,4,6,8], 输出 list[P2,P3,P4,P5]
+#         Ultralytics 自动展开为索引 9, 10, 11, 12 四个独立 tensor
+#   13  : BLPA on P2 (索引 9, 64ch)
+#   14  : BLPA on P3 (索引 10, 64ch)
+#   15  : Detect ← [13, 14, 11, 12]  (P2 用 BLPA 增强, P3 用 BLPA 增强, P4/P5 直通)
+
+nc: 2
+
+scales:
+  n: [0.5, 0.25, 1024]
+  s: [0.5, 0.5, 1024]
+  l: [1.0, 1.0, 512]
+  x: [1.0, 1.5, 512]
+
+backbone:
+  - [-1, 1, Conv,    [64, 3, 2]]              # 0
+  - [-1, 1, Conv,    [128, 3, 2, 1, 2]]       # 1
+  - [-1, 2, DSC3k2,  [256, false, 0.25]]      # 2  → P2 stride4
+  - [-1, 1, Conv,    [256, 3, 2, 1, 4]]       # 3
+  - [-1, 2, DSC3k2,  [512, false, 0.25]]      # 4  → P3 stride8
+  - [-1, 1, DSConv,  [512, 3, 2]]             # 5
+  - [-1, 4, A2C2f,   [512, true, 4]]          # 6  → P4 stride16
+  - [-1, 1, DSConv,  [1024, 3, 2]]            # 7
+  - [-1, 4, A2C2f,   [1024, true, 1]]         # 8  → P5 stride32
+
+head:
+  # ─── BiHSFPN: 4 路输入 → 4 路输出 ───
+  # 输出展开后的索引: 9=P2(64), 10=P3(64), 11=P4(128), 12=P5(256)
+  - [[2, 4, 6, 8], 1, BiHSFPN,
+     [[64, 64, 128, 256], [64, 64, 128, 256]]]   # 9
+
+  # ─── BLPA on small-target scales ───
+  - [9,  1, BLPA, [64]]    # 13: P2 + BLPA   (小目标主战场)
+  - [10, 1, BLPA, [64]]    # 14: P3 + BLPA   (中等小目标)
+
+  # P4 (索引 11) 和 P5 (索引 12) 直通, 不加 BLPA
+  # ─── Detect: P2_blpa, P3_blpa, P4, P5 ───
+  - [[13, 14, 11, 12], 1, Detect, [2]]           # 15
