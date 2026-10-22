@@ -6,5 +6,6 @@ __pycache__/
 results/
 
 # Data are distributed through ScienceDB; checkpoints are GitHub Release assets.
-data/
+/data/
 *.pt
+
