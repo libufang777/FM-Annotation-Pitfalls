@@ -1,9 +1,9 @@
-# COMPAG R1 evaluation and audit materials
+# Auditing the Hidden Pitfalls of Foundation-Model-Assisted Annotation in Agricultural Vision: A Third-Party Holdout Stress Test on Bean Leaf Disease Detection
 
 This repository contains the reviewer-requested reproducibility materials for
 the revised bean-disease audit. It contains no dataset photographs,
 dataset labels, SAM200 individual ratings, chat records, or internal notes.
-The repository is staged privately while the authors verify its contents.
+Code and fixed cohort manifests are provided here; checkpoints are available in the [v1.0 release](https://github.com/libufang777/FM-Annotation-Pitfalls/releases/tag/v1.0).
 
 ## What this reproduces
 
@@ -34,13 +34,29 @@ Obtain these separately; neither is included in this repository:
    `cohorts/Gold350.json` (image names and MD5 checksums). The 350 selected
    images must yield 1,319 rust and 751 angular boxes after filtering.
 
-ScienceDB Version 3 has been submitted under
-<https://doi.org/10.57760/sciencedb.38554>. Public access is subject to
-repository review and must be checked before publication. The relevant files
-are `MSHF_clean_split_v4.zip`, `MSHF_NewGold402_R1.zip`, and
-`DATASET_README.md`.
-The earlier `MSHF_NewGold402.zip` already has the same cleaned active labels,
-but lacks the fixed cohort manifests and contains superseded evaluation prose.
+Dataset DOI: [10.57760/sciencedb.38554](https://doi.org/10.57760/sciencedb.38554).
+**Version 2 is public. Version 3, which adds the fixed evaluation cohort
+lists and an updated README, is under repository review.** Reproduction does
+not require waiting for Version 3: use the public Version 2 data and the
+fixed manifests in this repository:
+
+| Cohort | Images | Manifest |
+|---|---:|---|
+| Gold 350 | 350 | [Gold350.json](cohorts/Gold350.json) |
+| Gold 402 | 402 | [Gold402.json](cohorts/Gold402.json) |
+| GoldA | 175 | [GoldA.json](cohorts/GoldA.json) |
+| GoldB | 175 | [GoldB.json](cohorts/GoldB.json) |
+| C175 | 175 | [C175.json](cohorts/C175.json) |
+
+Download `MSHF_clean_split_v4.zip` and `MSHF_NewGold402.zip` from Version 2;
+`MSHF_v4_safe_labels.zip` contains the SAM-completion label supplement.
+The active two-disease labels in `MSHF_NewGold402.zip` contain **2,070 boxes:
+1,319 rust and 751 angular leaf spot**. Select the 350-image primary cohort
+with `cohorts/Gold350.json`, retaining all listed images, including the 24
+with no two-disease boxes. The archive contains earlier documentation;
+the current paper and this repository define the fixed evaluation protocol.
+The Version 3 submission updates the documentation and supplies the same
+fixed cohort lists separately.
 The New Gold photographs originate from the third-party Marconi Lab corpus;
 the provenance screening found no MD5-identical image in v4 and disclosed
 one altered GoldA/training photograph. This is not a claim of complete
@@ -122,8 +138,7 @@ checkpoint files are staged as release assets, not committed to Git history.
 It does not contain photographs, label files, raw SAM200 rater sheets,
 internal notes, or unrelated experiments. Reproduction still requires the
 ScienceDB data, the separately released checkpoint files, and a compatible
-Python environment. A private repository link does not give reviewers access;
-public availability will be checked separately before submission.
+Python environment. The repository and release attachments are intended to be publicly accessible for review and reproduction.
 
 ## Checkpoint SHA256 values
 
@@ -167,3 +182,4 @@ before evaluation.
 | `coverage_C2_best.pt` | `342bdfd2e93b994f62e65a3c9719b18c9d2e7419baee5836cb99410e09169a94` | tab:coverage3seed sensitivity | best-validation-sensitivity |
 | `no_bean_relabelled_seed0_best.pt` | `9bab5345c025373290368bb41b7e633ea1f6fa4fc225cabbd1961ef3164d265e` | Section 5.4; reviewer 2-2.1 | best-validation |
 | `v2_pre_species_cleaning_seed0_best.pt` | `60e828537aa6c226fb6d1fd198f3a3ef7a5c4206cec38ef8196c811ed0618dbb` | Section 6.3; Gate 6 | best-validation |
+
