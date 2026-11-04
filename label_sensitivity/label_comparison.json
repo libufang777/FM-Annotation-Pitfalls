@@ -1,0 +1,95 @@
+{
+  "summaries": {
+    "v4_same_300": {
+      "files": 300,
+      "class_counts": {
+        "0": 1035,
+        "1": 982
+      },
+      "two_class_boxes": 2017,
+      "boxes_per_image_mean": 6.723333333333334,
+      "boxes_per_image_median": 5.0,
+      "normalized_area_median": 0.00043999999999999996,
+      "normalized_area_p95": 0.003048599999999994
+    },
+    "legacy_manual_same_300": {
+      "files": 300,
+      "class_counts": {
+        "1": 360,
+        "0": 4342,
+        "2": 324
+      },
+      "two_class_boxes": 4702,
+      "boxes_per_image_mean": 15.673333333333334,
+      "boxes_per_image_median": 14.0,
+      "normalized_area_median": 0.000349139844,
+      "normalized_area_p95": 0.0020133853908499972
+    },
+    "Gold350": {
+      "files": 350,
+      "class_counts": {
+        "2": 427,
+        "0": 1319,
+        "1": 751
+      },
+      "two_class_boxes": 2070,
+      "boxes_per_image_mean": 5.914285714285715,
+      "boxes_per_image_median": 5.0,
+      "normalized_area_median": 0.0006250000000000001,
+      "normalized_area_p95": 0.0047763731249999995
+    },
+    "C175": {
+      "files": 175,
+      "class_counts": {
+        "0": 661,
+        "1": 160
+      },
+      "two_class_boxes": 821,
+      "boxes_per_image_mean": 4.691428571428571,
+      "boxes_per_image_median": 4.0,
+      "normalized_area_median": 0.0004,
+      "normalized_area_p95": 0.002773
+    }
+  },
+  "matching": {
+    "same_class": {
+      "one_to_one_matched": 1189,
+      "v4_boxes": 2017,
+      "manual_boxes": 4702,
+      "fraction_v4_matched": 0.5894893406048587,
+      "fraction_manual_matched": 0.2528711186729051,
+      "class_matrix_v4_rows_manual_columns": [
+        [
+          924,
+          0
+        ],
+        [
+          0,
+          265
+        ]
+      ]
+    },
+    "class_agnostic": {
+      "one_to_one_matched": 1813,
+      "v4_boxes": 2017,
+      "manual_boxes": 4702,
+      "fraction_v4_matched": 0.8988596926127913,
+      "fraction_manual_matched": 0.3855806039982986,
+      "class_matrix_v4_rows_manual_columns": [
+        [
+          921,
+          21
+        ],
+        [
+          627,
+          244
+        ]
+      ]
+    }
+  },
+  "manual_inherits_draft": {
+    "manual_disease_boxes": 4702,
+    "same_class_and_geometry_to_6_decimals": 3405,
+    "same_geometry_any_class_to_6_decimals": 3735
+  }
+}

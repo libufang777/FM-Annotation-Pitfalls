@@ -183,3 +183,16 @@ before evaluation.
 | `no_bean_relabelled_seed0_best.pt` | `9bab5345c025373290368bb41b7e633ea1f6fa4fc225cabbd1961ef3164d265e` | Section 5.4; reviewer 2-2.1 | best-validation |
 | `v2_pre_species_cleaning_seed0_best.pt` | `60e828537aa6c226fb6d1fd198f3a3ef7a5c4206cec38ef8196c811ed0618dbb` | Section 6.3; Gate 6 | best-validation |
 
+
+
+## Label-sensitivity check (Appendix A.6)
+
+The same-image, fixed-prediction label-sensitivity analysis is documented in
+[`label_sensitivity/README.md`](label_sensitivity/README.md). It includes portable
+audit, label-comparison and paired-evaluation commands, frozen per-class results
+and 2,000 paired image-bootstrap intervals. The names and MD5 hashes of the 300
+legacy images are in [`cohorts/legacy_gold300.json`](cohorts/legacy_gold300.json).
+The earlier author-refined labels are available from the authors on request;
+the first-version Gold archive contains SAM drafts, not this refined label set.
+This analysis shows sensitivity to the label set and does not partition the new
+Gold holdout gap.
