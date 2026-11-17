@@ -3,7 +3,16 @@
 This repository contains the reviewer-requested reproducibility materials for
 the revised bean-disease audit. It contains no dataset photographs,
 dataset labels, SAM200 individual ratings, chat records, or internal notes.
-Code and fixed cohort manifests are provided here; checkpoints are available in the [v1.0 release](https://github.com/libufang777/FM-Annotation-Pitfalls/releases/tag/v1.0).
+Code and fixed cohort manifests are provided here; checkpoints are available in the [v1.1 release](https://github.com/libufang777/FM-Annotation-Pitfalls/releases/tag/v1.1).
+
+## Fixed manuscript version
+
+Release **v1.1** freezes the code, configurations, fixed cohort lists and
+label-sensitivity scripts corresponding to the revised COMPAG manuscript,
+including Appendix A.6. Its 32 checkpoint attachments have the same SHA256
+values as v1.0 and the manifest below. The exact commit is recorded on the
+v1.1 release page and in the manuscript. Historical checkpoint limitations
+listed below continue to apply.
 
 ## What this reproduces
 
@@ -35,10 +44,9 @@ Obtain these separately; neither is included in this repository:
    images must yield 1,319 rust and 751 angular boxes after filtering.
 
 Dataset DOI: [10.57760/sciencedb.38554](https://doi.org/10.57760/sciencedb.38554).
-**Version 2 is public. Version 3, which adds the fixed evaluation cohort
-lists and an updated README, is under repository review.** Reproduction does
-not require waiting for Version 3: use the public Version 2 data and the
-fixed manifests in this repository:
+**Version 3 is public.** It provides the audited splits, lesion-level holdout
+annotations, five fixed evaluation cohort lists and an updated README. The
+same fixed cohort lists are also provided in this repository:
 
 | Cohort | Images | Manifest |
 |---|---:|---|
@@ -48,15 +56,17 @@ fixed manifests in this repository:
 | GoldB | 175 | [GoldB.json](cohorts/GoldB.json) |
 | C175 | 175 | [C175.json](cohorts/C175.json) |
 
-Download `MSHF_clean_split_v4.zip` and `MSHF_NewGold402.zip` from Version 2;
+Download `MSHF_clean_split_v4.zip` and the Version 3 holdout package
+`MSHF_NewGold402_R1.zip` from ScienceDB;
 `MSHF_v4_safe_labels.zip` contains the SAM-completion label supplement.
 The active two-disease labels in `MSHF_NewGold402.zip` contain **2,070 boxes:
 1,319 rust and 751 angular leaf spot**. Select the 350-image primary cohort
 with `cohorts/Gold350.json`, retaining all listed images, including the 24
 with no two-disease boxes. The archive contains earlier documentation;
 the current paper and this repository define the fixed evaluation protocol.
-The Version 3 submission updates the documentation and supplies the same
-fixed cohort lists separately.
+The Version 3 package supplies the current README and all five fixed cohort
+lists. The frozen cohorts retain the images selected before box cleanup;
+Gold 350 includes 24 images with no remaining two-disease boxes.
 The New Gold photographs originate from the third-party Marconi Lab corpus;
 the provenance screening found no MD5-identical image in v4 and disclosed
 one altered GoldA/training photograph. This is not a claim of complete
